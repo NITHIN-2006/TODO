@@ -4,7 +4,7 @@ A production-ready React + Vite + TailwindCSS todo application with dark mode, o
 
 ---
 ## Screenshots
-![App ScreenShot](Screenshot 2026-03-03 171656.png)
+![App Screenshot](Screenshot 2026-03-03 171656.png)
 ## Project Structure
 
 ```
