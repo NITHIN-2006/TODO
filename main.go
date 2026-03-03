@@ -53,9 +53,12 @@ func main() {
 	AllowOrigins: "*",
 	AllowHeaders: "Origin, Content-Type, Accept",
 }))
- if os.Getenv("ENV")=="production"{
-	app.Static("/","./client/dist")
- }
+if os.Getenv("ENV") != "production" {
+	err := godotenv.Load(".env")
+	if err != nil {
+		log.Println("Warning: .env file not found")
+	}
+}
 	app.Get("/api/todos", getTodos)
 	app.Post("/api/todos", createTodo)
 	app.Put("/api/todos/:id", updateTodo)
