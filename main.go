@@ -23,13 +23,10 @@ type Todo struct {
 var collection *mongo.Collection
 
 func main() {
-	// MongoDB URI from Railway environment
-	MONGODB_URI := os.Getenv("MONGODB_URI")
+	MONGODB_URI := "mongodb+srv://mongodb:Bunny123@mongodb.c72oben.mongodb.net/?appName=mongodb"
 	if MONGODB_URI == "" {
 		log.Fatal("MONGODB_URI is not set")
 	}
-
-	// Connect to MongoDB
 	clientOptions := options.Client().ApplyURI(MONGODB_URI)
 	client, err := mongo.Connect(context.Background(), clientOptions)
 	if err != nil {
@@ -40,10 +37,9 @@ func main() {
 		log.Fatal("MongoDB connection failed:", err)
 	}
 
-	fmt.Println("✅ MongoDB connected")
+	fmt.Println("MongoDB connected")
 	collection = client.Database("golang_db").Collection("todos")
 
-	// Fiber app
 	app := fiber.New()
 
 	app.Use(cors.New(cors.Config{
@@ -56,7 +52,7 @@ func main() {
 	app.Delete("/api/todos/:id", deleteTodo)
 	port := os.Getenv("PORT")
 	if port == "" {
-		port = "4040" 
+		port = "5000" 
 	}
 
 	log.Fatal(app.Listen("0.0.0.0:" + port))

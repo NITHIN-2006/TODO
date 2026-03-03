@@ -5,10 +5,7 @@ import { TodoList } from "./components/TodoList";
 import { ErrorBanner } from "./components/ErrorBanner";
 import { useTodos } from "./hooks/useTodos";
 import { cn } from "./lib/utils";
-export const BASE_URL =
-  import.meta.env.MODE === "development"
-    ? "http://localhost:5000/api"
-    : "https://todo-production-47e4.up.railway.app/";
+
 function TodoApp() {
   const {
     todos,
