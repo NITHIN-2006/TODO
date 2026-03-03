@@ -1,15 +1,16 @@
 # Todo App
 
-A production-ready React + Vite + TailwindCSS todo application with dark mode, optimistic updates, and a clean SaaS aesthetic.
+A Simple Todo list maker made using Go+React.
 
 ---
 ## Screenshots
 ![App Screenshot](https://github.com/NITHIN-2006/TODO/blob/626fa70ed9f9307c1d52ffcad1e1667c7f6795b3/Screenshot%202026-03-03%20171656.png)
 ![App Screenshot](https://github.com/NITHIN-2006/TODO/blob/4f8f0467709e532eadb3388fe4ba9d804c944f1c/Screenshot%202026-03-03%20171708.png)
 ## Project Structure
-
 ```
-todo-app/
+todo-app/backend
+├── main.go
+todo-app-frontend/
 ├── index.html
 ├── package.json
 ├── postcss.config.js
@@ -50,12 +51,6 @@ npm install
 ```bash
 npx shadcn@latest init
 ```
-
-When prompted:
-- Style: Default
-- Base color: Zinc
-- CSS variables: Yes
-
 To add specific shadcn components:
 ```bash
 npx shadcn@latest add button
@@ -65,7 +60,7 @@ npx shadcn@latest add checkbox
 
 ### 3. Run the dev server
 
-Make sure your backend is running at `http://localhost:5000`, then:
+`http://localhost:5000`, then:
 
 ```bash
 npm run dev
