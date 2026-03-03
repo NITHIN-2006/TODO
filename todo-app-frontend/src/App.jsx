@@ -8,7 +8,7 @@ import { cn } from "./lib/utils";
 export const BASE_URL =
   import.meta.env.MODE === "development"
     ? "http://localhost:5000/api"
-    : "/api";
+    : "https://todo-production-47e4.up.railway.app/";
 function TodoApp() {
   const {
     todos,
