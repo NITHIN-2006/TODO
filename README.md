@@ -4,7 +4,7 @@ A production-ready React + Vite + TailwindCSS todo application with dark mode, o
 
 ---
 ## Screenshots
-![App Screenshot](Screenshot 2026-03-03 171656.png)
+![App Screenshot](https://github.com/NITHIN-2006/TODO/blob/626fa70ed9f9307c1d52ffcad1e1667c7f6795b3/Screenshot%202026-03-03%20171656.png)
 
 ## Project Structure
 
